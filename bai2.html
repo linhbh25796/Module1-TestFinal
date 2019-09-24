@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<script>
+    function tryRemoveFromArray(array, n) {
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] === n) {
+                array.splice(i, 1);
+                i--;
+            }
+        }
+        return array;
+
+    }
+
+    let arrayNumber = [12, 6, 3, 7, 21, 5, 7];
+    let numberRemoved = 12;
+    console.log(tryRemoveFromArray(arrayNumber, numberRemoved));
+</script>
+</body>
+</html>

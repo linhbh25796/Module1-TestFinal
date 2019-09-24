@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<script>
+
+    function printFibonacci(number) {
+        let aValue = 0;
+        let bValue = 1;
+        let result = bValue;
+        document.write("1" + "<br/>");
+        for (let i = 1; i < number; i++) {
+            result = aValue + bValue;
+            aValue = bValue;
+            bValue = result;
+            let isSmallerNumber = result < number;
+            if (isSmallerNumber) {
+                document.write(result + "<br>");
+            }
+        }
+    }
+
+    let inputNumber = parseInt(prompt());
+    printFibonacci(inputNumber);
+
+
+</script>
+</body>
+</html>
